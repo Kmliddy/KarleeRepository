@@ -1,0 +1,146 @@
+---
+title: "**Exploring Chinook Salmon Rearing Habitat Data**"
+author: "Karlee Liddy"
+output: html_document
+theme: 
+bootswatch: minty
+---
+#### 1 February 2022
+#### DS4E 
+
+![](Wetlands.PNG)
+DiGennaro et al. (2012) 
+
+## _**1. Introduction**_  
+
+### **1.1 Context/ Background**
+
+The Sacramento- San Joaquin Delta was once a vast, highly productive floodplain home to waterfowl, abundant native salmon runs, and large fauna like elk and mule deer. However, as early as the late 1800's, dikes and levees were developed to "reclaim" and divert water from the drained marshland to local farms in the Owens Valley.Throughout the early 1900's to 1960's, the rim dams were constructed and rivers continued to be captured through the Central Valley Project and State Water Project to provide water to growing cities. Today, 95% of historic wetlands have been lost, and flow regimes have been severely altered to the detriment of freshwater flora and fauna (Katz et al. 2017). 
+
+**LEARN MORE HERE: [CADILLAC DESERT](https://www.youtube.com/watch?v=hkbebOhnCjA&ab_channel=jkoomjian), [Delta Chronology](https://www.watereducation.org/aquapedia/sacramento-san-joaquin-delta-chronology)**
+
+### **1.2 Relevance** 
+
+The agricultural sector of the Central Valley supplies “8% of U.S. agricultural output (by value)" and produces about "1/4 of the nation's food, including 40% of the fruits, nuts, and other table foods”. These crops annually gross an estimated $17 billion. The S-SJ Delta is the second-most extracted aquifer in the U.S., and yields 20% of the nation’s groundwater demand (USGS). Its groundwater basins have supplied an estimated 30- 60% of the states water demand, but overdraft has been estimated at 2.4 million af/y between 2003 and 2017 (water Foundation, PPIC 2020). SGMA places pressure on local agencies to implement GSPs that will support sustainable groundwater levels by 2040, but the outlook is bleak thus far. As 95% of the SJV community relies solely on groundwater for drinking, some community members have reported paying up to 10% of their monthly income on purchasing bottled water for daily use (Water Foundation 2020). 
+
+#### **What's at stake:**
+  +  Between 4,000-12,000 partially or completely dry wells, affecting between 50,000- 127,000 people by 2040 (WF 2020)  
+  +  Seawater intrusion leading to mass crop failure
+  +  More frequent and severe flooding, leading to infrastructure failure
+  +  Land subsidence and fallowing needed to support GW recharge
+  +  Equity implications for domestic well users and GW-dependent communities 
+
+### **1.3 Data**
+
++ San Francisco Estuary Institute [Salmon Rearing Data](https://www.sfei.org/data/delta-salmon-rearing-geospatial-analyses#sthash.iy4dGNnJ.dpbs)
++ SFEI [Delta Historical Ecology](https://www.sfei.org/content/delta-historical-ecology-gis-data#sthash.R8MufElg.dpbs)
++ Dept. of Water Resources [Groundwater Withdrawal Data](https://databasin.org/maps/cb7af9ad78d44e63bc9d09ecb83be2eb/)
+
+### **1.4 Research Questions**
+
+Adapted from Delta Stewardship Council Management Needs Questions
+
+1. How can we achieve floodplain inundation for species recovery while balancing water resource needs for agriculture?  
+
+2. "How do we monitor and evaluate ecosystem restoration outcomes (e.g., for species recovery and ecosystem services)”?  
+
+3. How will the implementation of SGMA impact local and regional water inflows and exports from the Delta?  
+
+4. “What land management actions maximize benefits for sequestering carbon, reducing or reversing subsidence, and reducing flood risk?” 
+
+### **1.5 Objectives** 
+
++ Overlay Data 
+   +  Rearing habitat data 
+   +  Historic/ current land use data 
+   +  Groundwater basin data 
++ Identify a suite of potential case study locations based on set parameters 
++ Approach 3 agricultural water users with adjacent lands
+   +  Gauge interest and needs
+   +  Carry out roadmap development 
+   +  Co-produce focus group/ workshop materials 
+   
+### **1.6 References**
+
+Babbitt, C. et al. (2017) ‘Groundwater Trading as a Tool for Implementing California’s Sustainable Groundwater Management Act’, p. 16.
+
+Bostic, D. et al. 2020. Sustainable for Whom? The Impact of Groundwater Sustainability Plans on Domestic Wells. UC Davis Center for Regional Change. pp.1-18
+
+Bennett, N.J. et al. (2021) ‘Advancing Social Equity in and Through Marine Conservation’, Frontiers in Marine Science, 8, p. 994. doi:10.3389/fmars.2021.711538.
+
+Cinner, J.E. and Barnes, M.L. (2019) ‘Social Dimensions of Resilience in Social-Ecological Systems’, One Earth, 1(1), pp. 51–56. doi:10.1016/j.oneear.2019.08.003.
+
+DiGennaro, B. et al. (2012) ‘Using Conceptual Models in Ecosystem Restoration Decision Making: An Example from the Sacramento-San Joaquin River Delta, California’, San Francisco Estuary and Watershed Science, 10(3). doi:10.15447/sfews.2012v10iss3art1
+
+Hanak, E. et al. (2020) A Review of Groundwater Sustainability Plans in the San Joaquin Valley. Public Policy Institute of California, p. 13.
+
+Katz, J.V.E. et al. (2017) ‘Floodplain farm fields provide novel rearing habitat for Chinook salmon’, PLOS ONE, 12(6), p. e0177409. doi:10.1371/journal.pone.0177409.
+
+Kearns, F. et al. (2021) ‘Water Talk Podcast’. (The Human Right to Drinking Water & SGMA). Available at: https://www.watertalkpodcast.com/episodes/episode-17 (Accessed: 14 November 2021).
+
+Kiernan, J.D., Moyle, P.B. and Crain, P.K. (2012) ‘Restoring native ﬁsh assemblages to a regulated California stream using the natural ﬂow regime concept’, Ecological Applications, 22(5), p. 11.
+
+Michael Kiparsky, A.T.F. (2018) ‘Recharge Net Metering to Enhance Groundwater Sustainability’. doi:10.15779/J2792D.
+
+Niles, D.M.T. et al. (2019) ‘Research Briefing 1 of 3: Farmer Concerns and Perceptions of Groundwater Conditions’, p. 2.
+
+Ostrom, E. (2009) ‘A General Framework for Analyzing Sustainability of Social-Ecological Systems’, Science, 325(5939), pp. 419–422. doi:10.1126/science.1172133.
+
+Shilling, F.M., London, J.K. and Liévanos, R.S. (2009) ‘Marginalization by collaboration: Environmental justice as a third party in and beyond CALFED’, Environmental Science & Policy, 12(6), pp. 694–709. doi:10.1016/j.envsci.2009.03.003.
+
+Stein, E.D. et al. (2021) ‘The California Environmental Flows Framework: Meeting the Challenges of Developing a Large-Scale Environmental Flows Program’, Frontiers in Environmental Science, 9, p. 481. doi:10.3389/fenvs.2021.769943.
+
+University of California, Davis and Lund, J. (2016) ‘California’s Agricultural and Urban Water Supply Reliability and the Sacramento–San Joaquin Delta’, San Francisco Estuary and Watershed Science, 14(3). doi:10.15447/sfews.2016v14iss3art6.
+
+## _**2. Getting Started **_ 
+
+### **2.1 Rearing Habitat Data**
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
++ `install.packages("sf")` In order to read in .shp file 
+
+```{r Packages_Unseen,include=FALSE}
+library(tidyverse)
+library(sf)
+```
+
+```{r Packages, eval=FALSE}
+library(tidyverse)
+library(sf)
+```
+
++ Unzip Carrier File, read in the `veg` and `channel`.shp files 
+```{r Unzip, include=TRUE, results='hide'}
+
+unzip("C:/Users/klidd/Desktop/UCSC CSP/DS4E/SFEI2020.zip")
+
+veg<- st_read("C:/Users/klidd/Desktop/UCSC CSP/DS4E/SHP_Shapefile/D_Wetland_and_Riparian_Vegetation.shp")
+
+channel<- st_read("C:/Users/klidd/Desktop/UCSC CSP/DS4E/SHP_Shapefile/F_Channel_Network_Types.shp")
+
+```
+
++ We can determine the CRS of the files and ensure there is no warping
+```{r CRS, include=TRUE, results='hide'}
+st_crs(veg) # "NAD83/ California Albers"
+st_crs(veg) == st_crs(channel)
+```
+
+
++ We can plot the vector data to give us the skeleton of the Delta channels and veg
+```{r ggplot}
+ggplot(veg)+
+  geom_sf(data= veg, aes(),color="forestgreen") +
+  geom_sf(data= channel, aes(),color="blue") +
+  ggtitle("Delta Skeleton")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  coord_sf()
+
+```
+
+### **TO BE CONTINUED**
++ Zoom in on one area within the Delta (perhaps within 1 GW Basin)
++ Wrangle data to overlay habitat data, veg, groundwater levels, and historical data
++ Learn how to read in .tif and .kmz files 
