@@ -5,7 +5,7 @@ output: html_document
 theme: 
 bootswatch: minty
 ---
-#### 1 February 2022
+#### 8 March 2022
 #### DS4E 
 
 ![](Wetlands.PNG)
@@ -144,3 +144,139 @@ ggplot(veg)+
 + Zoom in on one area within the Delta (perhaps within 1 GW Basin)
 + Wrangle data to overlay habitat data, veg, groundwater levels, and historical data
 + Learn how to read in .tif and .kmz files 
+
+### Install all necessary packages  
+```{r load in packages }
+install.packages(c("dplyr","sf", "sp", "raster"))
+library(dplyr)
+library(sf)
+library(sp)
+library(raster)
+
+install.packages("rgdal")
+library(rgdal)
+
+install.packages("ggmap")
+library(ggmap)
+
+install.packages("tmap")
+library(tmap)
+
+install.packages("maps")
+library(maps)
+```
+
+
+### Read in BackgroundLayers.gdb 
+```{r background layers}
+
+background_data <- st_read("C:/Users/klidd/Desktop/UCSC CSP/DS4E/BackgroundLayers.gdb")
+background_layers <- st_layers(dsn="C:/Users/klidd/Desktop/UCSC CSP/DS4E/BackgroundLayers.gdb")
+background_layers$fields
+```
+
+
+```{r basemap}
+# attempting to create a basemap...
+
+#register_google(key = , write=TRUE)
+#ggmap_show_api_key()
+#showing_key()
+
+#delta<- c(lon=-121.84252,lat=38.07280, map)
+#delta_5 <- get_map(location= delta, zoom=5, scale=1)
+#ggmap(delta_5)
+
+delta_12 <- get_stamenmap(bbox = c(left = -121.9,
+                                    bottom = 37.6,
+                                    right = -121.2,
+                                    top = 38.8),
+          maptype = "terrain-background", 
+          crop = FALSE,
+          zoom = 12)
+
+ggmap(delta_12)
+
+```
+
+
+```{r colors}
+install.packages("RColorBrewer")
+library(RColorBrewer)
+
+blups<- brewer.pal(5,"BuPu")
+
+```
+
+
+### Parameters for determining rearing habitat suitability 
+```{r A_Depth_.tif }
+depth <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/A_Depth_m.tif")
+#depth_kmz<- st_read("C:/Users/klidd/Desktop/UCSC CSP/DS4E/KMZ_GoogleEarth/A_Depth_m.kmz")
+
+plot(depth)
+```
+
+```{r C_Water_Velocity.tif }
+water_vel <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/C_Water Velocity_m_per_s_2.tif")
+
+plot(water_vel)
+```
+
+```{r E_Aquatic_Veg.tif.vat.dbf  }
+aquatic_veg_df <-as.data.frame("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/ E_Submerged_and_Floating_Aquatic_Vegetation.tif.vat.dbf")
+
+str(aquatic_veg_df)
+```
+
+```{r G_Wetland_Proximity and H_Suitability.tif}
+wetland_prox_suit <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/H_Wetland_Proximity_Suitability.tif") 
+
+#Wetland_Proximity.tif}
+wetland_prox<- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/G_Wetland_Proximity.tif")
+
+plot(wetland_prox)
+```
+
+```{r J_Wetland_Edge_Suitability.tif}
+wetland_edge_suit <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/J_Weighted_Wetland_Edge_Suitability.tif")
+
+plot(wetland_edge_suit)
+```
+
+```{r K_Water_Temp_degC and L_Suitability.tif}
+water_temp <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/K_Water_Temperature_degC.tif")
+  
+water_temp_suit <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/L_Water_Temperature_Suitability.tif")
+
+raster::plot(water_temp,
+  main = "Average Water Temperature (deg C)",
+  xlab = "Easting",
+  ylab = "Northing")
+
+```
+
+```{r N_Distance_to_all_Wetlands.tif}
+distance_to_all_wetlands <- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/N_Distance_to_all_Wetlands.tif")
+
+plot(distance_to_all_wetlands)
+```
+
+
+```{r M_Combined_Habitat_Suitability.tif }
+habitat<- raster("C:/Users/klidd/Desktop/UCSC CSP/DS4E/GeoTIFF/M_Combined_Habitat_Suitability.tif")
+
+plot(habitat,aes(colors="blups"))
+#spplot(habitat)
+
+```
+
+
+```{r attempt to use tmap}
+library(tmap)
+#ggmap(delta_12)+
+  #geom_raster(aes(fill= delta_12))+
+  #geom_raster(aes(x,y),data= habitat)
+
+```
+
